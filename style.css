@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+}
+
+body {
+    background-color: #8A51FC;
+}
+
+.gif-logo {
+    width: 200px;
+    margin: 12px auto 16px;
+    display: block;
+}
+
+main {
+    width: 350px;
+    border-radius: 20px;
+    background: #F4F4F4;
+    border: none;
+    margin: 0 auto 40px;
+    padding: 30px 20px 15px;
+}
+
+.label-main {
+    color: #777;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+select {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+input {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+button {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 5px;
+    background: #772FD3;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+section {
+    border-radius: 20px;
+    border: 1px solid #772FD3;
+    padding: 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-currency {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.image-seta {
+    margin: 10px;
+    width: 33px;
+}
+
+.currency {
+    color: #777;
+    font-size: 15px;
+    font-weight: 400
+}
+
+.currency-value, .converted-currency-value {
+    color: #555;
+    font-size: 18px;
+    font-weight: 700;
+}
