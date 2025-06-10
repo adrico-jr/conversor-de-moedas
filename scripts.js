@@ -9,6 +9,8 @@ function convertValues() {
 
     const dolarDay = 5.56
     const euroDay = 6.36
+    const libraDay = 7.54
+    const ieneDay = 0.038
 
     if (currencySelect.value == "dolar") {
         convertedCurrency.innerHTML = new Intl.NumberFormat("en-US", {
@@ -22,6 +24,20 @@ function convertValues() {
             style: "currency",
             currency: "EUR"
         }).format(valuesInput / euroDay)
+    }
+
+    if (currencySelect.value == "libra") {
+       convertedCurrency.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(valuesInput / libraDay) 
+    }
+
+    if (currencySelect.value == "iene") {
+       convertedCurrency.innerHTML = new Intl.NumberFormat("ja-JP", {
+            style: "currency",
+            currency: "JPY"
+        }).format(valuesInput / ieneDay) 
     }
 
     currencyValueToBeConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -43,6 +59,17 @@ function changeCurrency() {
     if (currencySelect.value == "euro") {
         currencyName.innerHTML = "Euro"
         currencyImg.src = "./assets/euro.png"
+    }
+
+    if (currencySelect.value == "libra") {
+        currencyName.innerHTML = "Libra"
+        currencyImg.src = "./assets/libra.png"
+    }
+
+    if (currencySelect.value == "iene") {
+        currencyName.innerHTML = "Iene"
+        currencyImg.src = "./assets/iene.png"
+        currencyImg.style.width = "50px"
     }
 
     convertValues()
