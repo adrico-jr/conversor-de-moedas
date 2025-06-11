@@ -19,8 +19,13 @@
 
         <label class="label-main">
             Converter <b>de</b>
-            <select>
-                <option>R$ Real brasileiro</option>
+            <select class="currency-convert">
+                <option value="real-convert">R$ Real brasileiro</option>
+                 <option value="dolar-convert">US$ Dólar americano</option>
+                <option value="euro-convert">€ Euro</option>
+                <option value="libra-convert">£ Libra</option>
+                <option value="iene-convert">¥ Iene</option>
+                <option value="bitcoin-convert">BTC Bitcoin</option>
             </select>
         </label>
 
@@ -31,6 +36,8 @@
                 <option value="euro">€ Euro</option>
                 <option value="libra">£ Libra</option>
                 <option value="iene">¥ Iene</option>
+                <option value="bitcoin">BTC Bitcoin</option>
+                <option value="real">R$ Real</option>
             </select>
         </label>
 
@@ -43,7 +50,7 @@
 
         <section>
             <div class="box-currency">
-                <img src="./assets/real.png" alt="logo-moeda-real">
+                <img src="./assets/real.png" alt="logo-moeda-real" class="image-convert">
                 <p class="currency">Real</p>
                 <p class="currency-value">R$ 0,00</p>
             </div>
