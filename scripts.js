@@ -6,6 +6,7 @@ function convertValues() {
     const valuesInput = document.querySelector(".values-input").value
     const currencyValueToBeConverted = document.querySelector(".currency-value")
     const convertedCurrency = document.querySelector(".converted-currency-value")
+    const currencyValue = document.querySelector(".currency-value")
 
     const dolarDay = 5.56
     const euroDay = 6.36
@@ -56,17 +57,31 @@ function convertValues() {
         }).format(valuesInput / bitcoinDay)
     }
 
-
-    currencyValueToBeConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+     currencyValueToBeConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL"
     }).format(valuesInput)
+
+    if(currencyConvert.value == "dolar-convert" && currencySelect.value == "real") {
+        currencyValue.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(valuesInput)
+         convertedCurrency.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(valuesInput / dolarDay)
+    }
+
+   
 
 }
 
 function changeCurrency() {
     const currencyName = document.getElementById("currency-name")
     const currencyImg = document.querySelector(".currency-img")
+    const currency = document.getElementById("currency-one")
+    const  imageConvert = document.querySelector(".image-convert")
 
     if (currencySelect.value == "dolar") {
         currencyName.innerHTML = "Dolar americano"
@@ -99,8 +114,12 @@ function changeCurrency() {
         currencyImg.src = "./assets/bitcoin.png"
     }
 
+    if(currencyConvert.value == "dolar-convert" && currencySelect.value == "real") {
+        currency.innerHTML = "Dolar americano"
+        imageConvert.src = "./assets/dolar-usa.png"
+    }
 
-    convertValues()
+convertValues()
 }
 
 
