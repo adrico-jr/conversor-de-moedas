@@ -14,6 +14,7 @@ function convertValues() {
     const ieneDay = 0.038
     const bitcoinDay = 609669.02
     const realDay = 1
+    const dolarComparedDolar = 1
     const euroComparedDolar = 1.16
     const libraComparedDolar = 1.36
 
@@ -74,6 +75,17 @@ function convertValues() {
             style: "currency",
             currency: "USD",
         }).format(valuesInput)
+    }
+
+    if (currencyConvert.value == "dolar-convert" && currencySelect.value == "dolar") {
+        currencyValue.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(valuesInput)
+        convertedCurrency.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(valuesInput / dolarComparedDolar)
     }
 
     if (currencyConvert.value == "dolar-convert" && currencySelect.value == "real") {
